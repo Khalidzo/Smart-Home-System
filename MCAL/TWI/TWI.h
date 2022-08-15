@@ -1,9 +1,3 @@
-/*
- * TWI.h
- *
- * Created: 8/15/2022 8:25:54 PM
- *  Author: krkrl
- */ 
 
 
 #ifndef TWI_H_

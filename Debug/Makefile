@@ -36,6 +36,7 @@ SUBDIRS :=  \
 ../Application\ layer \
 ../HAL \
 ../HAL/LCD \
+../HAL/EEPROM \
 ../MCAL \
 ../MCAL/TWI
 
@@ -43,6 +44,8 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../Application\ layer/main.c \
+../Application\ layer/UserManagement.c \
+../HAL/EEPROM/EEPROM.c \
 ../HAL/LCD/LCD.c \
 ../MCAL/TWI/TWI.c
 
@@ -55,21 +58,29 @@ ASM_SRCS +=
 
 OBJS +=  \
 Application\ layer/main.o \
+Application\ layer/UserManagement.o \
+HAL/EEPROM/EEPROM.o \
 HAL/LCD/LCD.o \
 MCAL/TWI/TWI.o
 
 OBJS_AS_ARGS +=  \
 "Application layer/main.o" \
+"Application layer/UserManagement.o" \
+HAL/EEPROM/EEPROM.o \
 HAL/LCD/LCD.o \
 MCAL/TWI/TWI.o
 
 C_DEPS +=  \
 Application\ layer/main.d \
+Application\ layer/UserManagement.d \
+HAL/EEPROM/EEPROM.d \
 HAL/LCD/LCD.d \
 MCAL/TWI/TWI.d
 
 C_DEPS_AS_ARGS +=  \
 "Application layer/main.d" \
+"Application layer/UserManagement.d" \
+HAL/EEPROM/EEPROM.d \
 HAL/LCD/LCD.d \
 MCAL/TWI/TWI.d
 
@@ -90,21 +101,35 @@ LINKER_SCRIPT_DEP+=
 Application\ layer/main.o: ../Application\ layer/main.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Application\ layer/UserManagement.o: ../Application\ layer/UserManagement.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+HAL/EEPROM/EEPROM.o: ../HAL/EEPROM/EEPROM.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 HAL/LCD/LCD.o: ../HAL/LCD/LCD.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 MCAL/TWI/TWI.o: ../MCAL/TWI/TWI.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 

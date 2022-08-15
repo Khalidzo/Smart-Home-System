@@ -101,6 +101,7 @@
       <Value>../Application layer</Value>
       <Value>../HAL/LCD</Value>
       <Value>../MCAL/TWI</Value>
+      <Value>../HAL/EEPROM</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -132,6 +133,18 @@
     <Compile Include="Application layer\StdTypes.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Application layer\UserManagement.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Application layer\UserManagement.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\LCD\LCD.c">
       <SubType>compile</SubType>
     </Compile>
@@ -149,6 +162,7 @@
     <Folder Include="Application layer" />
     <Folder Include="HAL" />
     <Folder Include="HAL\LCD" />
+    <Folder Include="HAL\EEPROM" />
     <Folder Include="MCAL" />
     <Folder Include="MCAL\TWI" />
   </ItemGroup>

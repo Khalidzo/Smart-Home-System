@@ -16,7 +16,11 @@ Application layer/main.d Application layer/main.o: \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  ../Application\ layer/BitMath.h ../Application\ layer/StdTypes.h \
  ../HAL/LCD/LCD.h ../Application\ layer/StdTypes.h ../MCAL/TWI/TWI.h \
- ../Application\ layer/BitMath.h
+ ../Application\ layer/BitMath.h ../HAL/EEPROM/EEPROM.h \
+ ../Application\ layer/UserManagement.h \
+ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
+ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
+ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h
 
 d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -57,3 +61,13 @@ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 ../MCAL/TWI/TWI.h:
 
 ../Application\ layer/BitMath.h:
+
+../HAL/EEPROM/EEPROM.h:
+
+../Application\ layer/UserManagement.h:
+
+d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
+
+d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h:
+
+d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:

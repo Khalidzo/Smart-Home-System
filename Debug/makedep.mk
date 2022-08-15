@@ -4,6 +4,10 @@
 
 Application layer\main.c
 
+Application layer\UserManagement.c
+
+HAL\EEPROM\EEPROM.c
+
 HAL\LCD\LCD.c
 
 MCAL\TWI\TWI.c
