@@ -61,6 +61,24 @@ Discarded input sections
  .bss           0x00000000        0x0 MCAL/TWI/TWI.o
  .text.TWI_Read_Ack
                 0x00000000       0x16 MCAL/TWI/TWI.o
+ .text          0x00000000        0x0 MCAL/UART/UART.o
+ .data          0x00000000        0x0 MCAL/UART/UART.o
+ .bss           0x00000000        0x0 MCAL/UART/UART.o
+ .text.UART_Init
+                0x00000000       0x2a MCAL/UART/UART.o
+ .text.UART_Transmit
+                0x00000000        0x8 MCAL/UART/UART.o
+ .text.UART_Receive
+                0x00000000        0x8 MCAL/UART/UART.o
+ .debug_info    0x00000000      0x11f MCAL/UART/UART.o
+ .debug_abbrev  0x00000000       0xa7 MCAL/UART/UART.o
+ .debug_aranges
+                0x00000000       0x30 MCAL/UART/UART.o
+ .debug_ranges  0x00000000       0x20 MCAL/UART/UART.o
+ .debug_line    0x00000000      0x130 MCAL/UART/UART.o
+ .debug_str     0x00000000      0x1e0 MCAL/UART/UART.o
+ .comment       0x00000000       0x31 MCAL/UART/UART.o
+ .debug_frame   0x00000000       0x44 MCAL/UART/UART.o
  .text          0x00000000        0x0 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .data          0x00000000        0x0 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .bss           0x00000000        0x0 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
@@ -169,6 +187,7 @@ LOAD Application layer/UserManagement.o
 LOAD HAL/EEPROM/EEPROM.o
 LOAD HAL/LCD/LCD.o
 LOAD MCAL/TWI/TWI.o
+LOAD MCAL/UART/UART.o
 START GROUP
 LOAD d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP

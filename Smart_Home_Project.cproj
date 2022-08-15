@@ -102,6 +102,7 @@
       <Value>../HAL/LCD</Value>
       <Value>../MCAL/TWI</Value>
       <Value>../HAL/EEPROM</Value>
+      <Value>../MCAL/UART</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -157,6 +158,15 @@
     <Compile Include="MCAL\TWI\TWI.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\UART\UART.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UARTCfg.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application layer" />
@@ -164,6 +174,7 @@
     <Folder Include="HAL\LCD" />
     <Folder Include="HAL\EEPROM" />
     <Folder Include="MCAL" />
+    <Folder Include="MCAL\UART" />
     <Folder Include="MCAL\TWI" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
