@@ -120,9 +120,20 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="main.c">
+    <Compile Include="Application layer\BitMath.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Application layer\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Application layer\StdTypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application layer" />
+    <Folder Include="HAL" />
+    <Folder Include="MCAL" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
