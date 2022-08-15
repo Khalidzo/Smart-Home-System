@@ -27,6 +27,33 @@ Discarded input sections
                 0x00000000        0x8 HAL/LCD/LCD.o
  .text.LCD_ShiftLeft
                 0x00000000        0x8 HAL/LCD/LCD.o
+ .text          0x00000000        0x0 MCAL/TWI/TWI.o
+ .data          0x00000000        0x0 MCAL/TWI/TWI.o
+ .bss           0x00000000        0x0 MCAL/TWI/TWI.o
+ .text.TWI_Init
+                0x00000000        0x6 MCAL/TWI/TWI.o
+ .text.TWI_Send_StopBit
+                0x00000000        0x6 MCAL/TWI/TWI.o
+ .text.TWI_Status
+                0x00000000        0x6 MCAL/TWI/TWI.o
+ .text.TWI_Send_StartBit
+                0x00000000       0x10 MCAL/TWI/TWI.o
+ .text.TWI_Send_Byte
+                0x00000000       0x12 MCAL/TWI/TWI.o
+ .text.TWI_Read_Ack
+                0x00000000       0x16 MCAL/TWI/TWI.o
+ .text.TWI_Read_NAck
+                0x00000000       0x16 MCAL/TWI/TWI.o
+ .debug_info    0x00000000      0x1a8 MCAL/TWI/TWI.o
+ .debug_abbrev  0x00000000       0xd1 MCAL/TWI/TWI.o
+ .debug_loc     0x00000000       0x79 MCAL/TWI/TWI.o
+ .debug_aranges
+                0x00000000       0x50 MCAL/TWI/TWI.o
+ .debug_ranges  0x00000000       0x40 MCAL/TWI/TWI.o
+ .debug_line    0x00000000      0x1ac MCAL/TWI/TWI.o
+ .debug_str     0x00000000      0x1fe MCAL/TWI/TWI.o
+ .comment       0x00000000       0x31 MCAL/TWI/TWI.o
+ .debug_frame   0x00000000       0x84 MCAL/TWI/TWI.o
  .text          0x00000000        0x0 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .data          0x00000000        0x0 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .bss           0x00000000        0x0 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
@@ -109,6 +136,7 @@ Linker script and memory map
 LOAD D:/Microchip studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
 LOAD Application layer/main.o
 LOAD HAL/LCD/LCD.o
+LOAD MCAL/TWI/TWI.o
 START GROUP
 LOAD d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP

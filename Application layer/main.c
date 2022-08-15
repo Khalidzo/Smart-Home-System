@@ -7,6 +7,7 @@
 #include "BitMath.h"
 #include "StdTypes.h"
 #include "LCD.h"
+#include "TWI.h"
 
 int main(void)
 {

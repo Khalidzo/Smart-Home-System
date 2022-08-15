@@ -1,5 +1,4 @@
-Application layer/main.d Application layer/main.o: \
- ../Application\ layer/main.c \
+MCAL/TWI/TWI.d MCAL/TWI/TWI.o: ../MCAL/TWI/TWI.c ../MCAL/TWI/TWI.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -11,12 +10,9 @@ Application layer/main.d Application layer/main.o: \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
- d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../Application\ layer/BitMath.h ../Application\ layer/StdTypes.h \
- ../HAL/LCD/LCD.h ../Application\ layer/StdTypes.h ../MCAL/TWI/TWI.h \
- ../Application\ layer/BitMath.h
+ ../Application\ layer/StdTypes.h ../Application\ layer/BitMath.h
+
+../MCAL/TWI/TWI.h:
 
 d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -40,20 +36,6 @@ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.
 
 d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
-d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
-
-d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
-
-d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
-
-../Application\ layer/BitMath.h:
-
 ../Application\ layer/StdTypes.h:
-
-../HAL/LCD/LCD.h:
-
-../Application\ layer/StdTypes.h:
-
-../MCAL/TWI/TWI.h:
 
 ../Application\ layer/BitMath.h:
