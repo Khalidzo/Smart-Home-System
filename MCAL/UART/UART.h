@@ -7,7 +7,7 @@
 #include "BitMath.h"
 #include "StdTypes.h"
 #include <avr/io.h>
-/******************************************_DEFINES_***************************************/
+/******************************************_MACROS_***************************************/
 #define PARITY_DISABLE            1
 #define PARITY_ODD                2
 #define PARITY_EVEN               3

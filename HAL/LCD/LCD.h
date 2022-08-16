@@ -10,7 +10,7 @@
 #define F_CPU 16000000
 #include "util\delay.h"
 #include "avr/iom32.h"
-/******************************************_DEFINES_***************************************/
+/******************************************_MACROS_***************************************/
 #define LCD_8_BIT_MODE			0x38
 #define LCD_4_BIT_MODE			0x28
 #define DISPLAY_ON_CURSOR_OFF	0x0C

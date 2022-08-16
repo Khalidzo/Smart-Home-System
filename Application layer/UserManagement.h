@@ -10,15 +10,16 @@
 #include <stdlib.h>
 #include <avr/io.h>
 #include "string.h"
-/*******************************************_DEFINES_***************************************/
+/*******************************************_MACROS_***************************************/
 #define USER1 1
 #define USER2 2
 #define USER3 3
+/****************************************_USER_STRUCT_***************************************/
 struct user {
 	u8 name[8];		//Name is 8 char long
 	u8 password[4]; //Password is 4 digits
 };
-/******************************************_PROTOTYPES_***************************************/
+/****************************************_PROTOTYPES_***************************************/
 void manageUser(u8* userName, u8* userPassword, u8 userNumber);
 void storeName(u8* name, u8* memoryAddress);
 u8* getName(u8 userNumber);
