@@ -165,6 +165,9 @@
     <Compile Include="MCAL\ADC\ADC.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\ADC\ADCCfg.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="MCAL\TWI\TWI.c">
       <SubType>compile</SubType>
     </Compile>
