@@ -6,6 +6,8 @@ Application layer\main.c
 
 Application layer\UserManagement.c
 
+HAL\Bluetooth\Bluetooth.c
+
 HAL\EEPROM\EEPROM.c
 
 HAL\LCD\LCD.c

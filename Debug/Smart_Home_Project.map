@@ -52,6 +52,27 @@ Discarded input sections
                 0x00000000       0xbe Application layer/UserManagement.o
  .bss.users     0x00000000        0xc Application layer/UserManagement.o
  COMMON         0x00000000       0x24 Application layer/UserManagement.o
+ .text          0x00000000        0x0 HAL/Bluetooth/Bluetooth.o
+ .data          0x00000000        0x0 HAL/Bluetooth/Bluetooth.o
+ .bss           0x00000000        0x0 HAL/Bluetooth/Bluetooth.o
+ .text.Bluetooth_Init
+                0x00000000        0x6 HAL/Bluetooth/Bluetooth.o
+ .text.Bluetooth_SendByte
+                0x00000000        0x6 HAL/Bluetooth/Bluetooth.o
+ .text.Blutooth_SendString
+                0x00000000       0x26 HAL/Bluetooth/Bluetooth.o
+ .text.Bluetooth_Receive
+                0x00000000        0x8 HAL/Bluetooth/Bluetooth.o
+ .debug_info    0x00000000      0x1e3 HAL/Bluetooth/Bluetooth.o
+ .debug_abbrev  0x00000000      0x148 HAL/Bluetooth/Bluetooth.o
+ .debug_loc     0x00000000       0xbe HAL/Bluetooth/Bluetooth.o
+ .debug_aranges
+                0x00000000       0x38 HAL/Bluetooth/Bluetooth.o
+ .debug_ranges  0x00000000       0x28 HAL/Bluetooth/Bluetooth.o
+ .debug_line    0x00000000      0x1a4 HAL/Bluetooth/Bluetooth.o
+ .debug_str     0x00000000      0x252 HAL/Bluetooth/Bluetooth.o
+ .comment       0x00000000       0x31 HAL/Bluetooth/Bluetooth.o
+ .debug_frame   0x00000000       0x60 HAL/Bluetooth/Bluetooth.o
  .text          0x00000000        0x0 HAL/EEPROM/EEPROM.o
  .data          0x00000000        0x0 HAL/EEPROM/EEPROM.o
  .bss           0x00000000        0x0 HAL/EEPROM/EEPROM.o
@@ -199,6 +220,7 @@ Linker script and memory map
 LOAD D:/Microchip studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
 LOAD Application layer/main.o
 LOAD Application layer/UserManagement.o
+LOAD HAL/Bluetooth/Bluetooth.o
 LOAD HAL/EEPROM/EEPROM.o
 LOAD HAL/LCD/LCD.o
 LOAD MCAL/TWI/TWI.o
