@@ -104,6 +104,7 @@
       <Value>../HAL/EEPROM</Value>
       <Value>../MCAL/UART</Value>
       <Value>../MCAL/ADC</Value>
+      <Value>../HAL/TempSensor</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -159,6 +160,12 @@
     <Compile Include="HAL\LCD\LCD.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="HAL\TempSensor\TempSensor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\TempSensor\TempSensor.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="MCAL\ADC\ADC.c">
       <SubType>compile</SubType>
     </Compile>
@@ -190,6 +197,7 @@
     <Folder Include="HAL\LCD" />
     <Folder Include="HAL\EEPROM" />
     <Folder Include="HAL\Bluetooth" />
+    <Folder Include="HAL\TempSensor" />
     <Folder Include="MCAL" />
     <Folder Include="MCAL\ADC" />
     <Folder Include="MCAL\UART" />

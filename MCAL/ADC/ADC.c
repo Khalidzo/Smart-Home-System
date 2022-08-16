@@ -3,6 +3,7 @@
 #include "ADC.h"
 
 u16 x = 0;
+
 void ADC_Init(void){
 	#if   VREF   ==   AVCC
 	SET_BIT(ADMUX,6);
