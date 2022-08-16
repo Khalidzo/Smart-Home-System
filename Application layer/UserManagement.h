@@ -24,7 +24,9 @@ void storeName(u8* name, u8* memoryAddress);
 u8* getName(u8 userNumber);
 void storePassword(u8* Password, u8* memoryAddress);
 u8* getPassword(u8 userNumber);
-
+void enterPassword(u8 userNumber);
+void setAlarm(void);
+u8* receivePassword(void);
 
 
 #endif /* USERMANAGEMENT_H_ */

@@ -99,3 +99,82 @@ u8* getPassword(u8 userNumber) {
 	tmp[i] = '\0';
 	return password;
 }
+
+void enterPassword(u8 userNumber) {
+	LCD_WriteString("Welcome ");
+	LCD_WriteString(getName(userNumber));
+	_delay_ms(1500);
+	LCD_Clear();
+	u8 nTrials = 0;
+	u8* password = getPassword(userNumber);
+	u8* currentPassword = receivePassword();
+	u8 counter = 0;
+	while(strcmp(getPassword(userNumber), currentPassword) != 0) {
+		LCD_Clear();
+		LCD_WriteString("Wrong Password");
+		_delay_ms(1500);
+		LCD_Clear();
+		LCD_WriteString("Try again!");
+		_delay_ms(1000);
+		LCD_Clear();
+		currentPassword = receivePassword();
+		nTrials++;
+		if(nTrials >= 0) {
+			setAlarm();
+			break;
+		}
+	}
+	if(nTrials < 3) {
+		LCD_Clear();
+		LCD_WriteString("Welcome home!");
+		//Open door using servo motor
+		_delay_ms(1500);
+		LCD_Clear();
+	}
+}
+
+void setAlarm(void) {
+	LCD_Clear();
+	_delay_ms(2000);
+	LCD_WriteString("Login Failure");
+	_delay_ms(2000);
+	LCD_Clear();
+	LCD_WriteString("System Alarm ON!");
+	_delay_ms(1500);
+	LCD_Clear();
+	PORTA |= 1<<3;
+	_delay_ms(1000);
+	PORTA &= ~(1<<3);
+	_delay_ms(500);
+	PORTA |= 1<<3;
+	_delay_ms(1000);
+	PORTA &= ~(1<<3);
+	_delay_ms(500);
+	PORTA |= 1<<3;
+	_delay_ms(1000);
+	PORTA &= ~(1<<3);
+	_delay_ms(500);
+}
+
+u8* receivePassword(void) {
+	u8 counter = 0;
+	u8* tmpPassowrd  = (char*)(malloc(sizeof(char) * 5));
+	u8* password = tmpPassowrd;
+	u8 rChar;
+	LCD_WriteString("Enter password:");
+	while(counter != 4) {
+		
+		rChar = Bluetooth_Receive();
+		_delay_ms(25);
+		if(rChar >= 48 && rChar <= 57) {
+			_delay_ms(25);
+			*tmpPassowrd = rChar;
+			LCD_GoTo(1,counter);
+			LCD_WriteChar('*');
+			tmpPassowrd++;
+			counter++;
+		}
+	}
+	*tmpPassowrd = '\0';
+	return password;
+}
