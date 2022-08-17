@@ -8,6 +8,8 @@ Application layer\UserManagement.c
 
 HAL\Bluetooth\Bluetooth.c
 
+HAL\DCMotor\DCMotor.c
+
 HAL\EEPROM\EEPROM.c
 
 HAL\LCD\LCD.c

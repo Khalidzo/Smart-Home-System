@@ -1,0 +1,17 @@
+
+#include "DCMotor.h"
+
+void DCMotor_Init(void){
+	//Set pin direction
+	SET_BIT(DC_MOTOR_CONTROL_PORT_D, ENABLE_PIN);
+	SET_BIT(DC_MOTOR_DIRECTION_PORT_D, DIRECTION_PIN);
+	SET_BIT(DC_MOTOR_DIRECTION_PORT_C, DIRECTION_PIN);
+}
+void DCMotor_Start(void){
+	//SET Enable
+	SET_BIT(DC_MOTOR_CONTROL_PORT_C, ENABLE_PIN);
+}
+void DCMotor_Stop(void){
+	//Clear Enable
+	CLEAR_BIT(DC_MOTOR_CONTROL_PORT_C, ENABLE_PIN);	
+}

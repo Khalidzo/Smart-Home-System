@@ -106,6 +106,7 @@
       <Value>../MCAL/ADC</Value>
       <Value>../HAL/TempSensor</Value>
       <Value>../HAL/ServoMotor</Value>
+      <Value>../HAL/DCMotor</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -147,6 +148,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\Bluetooth\Bluetooth.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\DCMotor\DCMotor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\DCMotor\DCMotor.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\EEPROM\EEPROM.c">
@@ -204,6 +211,7 @@
     <Folder Include="HAL\LCD" />
     <Folder Include="HAL\EEPROM" />
     <Folder Include="HAL\Bluetooth" />
+    <Folder Include="HAL\DCMotor" />
     <Folder Include="HAL\ServoMotor" />
     <Folder Include="HAL\TempSensor" />
     <Folder Include="MCAL" />
