@@ -12,6 +12,8 @@ HAL\EEPROM\EEPROM.c
 
 HAL\LCD\LCD.c
 
+HAL\ServoMotor\ServoMotor.c
+
 HAL\TempSensor\TempSensor.c
 
 MCAL\ADC\ADC.c

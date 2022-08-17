@@ -11,7 +11,7 @@ d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4
 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
                               Application layer/UserManagement.o (__do_clear_bss)
 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                              HAL/TempSensor/TempSensor.o (__umulhisi3)
+                              HAL/ServoMotor/ServoMotor.o (__umulhisi3)
 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
                               d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o) (__udivmodhi4)
 d:/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
@@ -91,6 +91,23 @@ Discarded input sections
                 0x00000000        0x8 HAL/LCD/LCD.o
  .text.LCD_ShiftLeft
                 0x00000000        0x8 HAL/LCD/LCD.o
+ .text          0x00000000        0x0 HAL/ServoMotor/ServoMotor.o
+ .data          0x00000000        0x0 HAL/ServoMotor/ServoMotor.o
+ .bss           0x00000000        0x0 HAL/ServoMotor/ServoMotor.o
+ .text.ServoMotor_Init
+                0x00000000       0x46 HAL/ServoMotor/ServoMotor.o
+ .text.ServoMotor_Rotate
+                0x00000000       0x2e HAL/ServoMotor/ServoMotor.o
+ .debug_info    0x00000000       0xda HAL/ServoMotor/ServoMotor.o
+ .debug_abbrev  0x00000000       0x85 HAL/ServoMotor/ServoMotor.o
+ .debug_loc     0x00000000       0x2c HAL/ServoMotor/ServoMotor.o
+ .debug_aranges
+                0x00000000       0x28 HAL/ServoMotor/ServoMotor.o
+ .debug_ranges  0x00000000       0x18 HAL/ServoMotor/ServoMotor.o
+ .debug_line    0x00000000      0x117 HAL/ServoMotor/ServoMotor.o
+ .debug_str     0x00000000      0x1d0 HAL/ServoMotor/ServoMotor.o
+ .comment       0x00000000       0x31 HAL/ServoMotor/ServoMotor.o
+ .debug_frame   0x00000000       0x34 HAL/ServoMotor/ServoMotor.o
  .text          0x00000000        0x0 HAL/TempSensor/TempSensor.o
  .data          0x00000000        0x0 HAL/TempSensor/TempSensor.o
  .bss           0x00000000        0x0 HAL/TempSensor/TempSensor.o
@@ -291,6 +308,7 @@ LOAD Application layer/UserManagement.o
 LOAD HAL/Bluetooth/Bluetooth.o
 LOAD HAL/EEPROM/EEPROM.o
 LOAD HAL/LCD/LCD.o
+LOAD HAL/ServoMotor/ServoMotor.o
 LOAD HAL/TempSensor/TempSensor.o
 LOAD MCAL/ADC/ADC.o
 LOAD MCAL/TWI/TWI.o
