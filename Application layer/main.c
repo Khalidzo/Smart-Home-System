@@ -12,6 +12,8 @@
 #include "UserManagement.h"
 #include <stdlib.h>
 
+u16 UART_RX_VALUE; //UART Receive value
+
 int main(void)
 {
 	
@@ -71,4 +73,18 @@ int main(void)
 			PORTC &= ~(1<<2);
 		}
 	}
+}
+
+//UART ISR
+ISR(USART_RXC_vect){
+	/*Read the data from buffer*/
+	UART_RX_VALUE = UDR;
+	if(UART_RX_VALUE == 'A') {
+		LCD_Clear();
+		LCD_WriteString("HELLO!");
+		_delay_ms(1000);
+		LCD_Clear();
+	}
+	/*Clear the interrupt flag*/
+	UCSRA|=(1<<RXC);
 }

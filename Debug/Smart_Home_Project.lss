@@ -5,29 +5,29 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         0000071e  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000022  00800060  0000071e  000007b2  2**0
+  1 .data         0000002a  00800060  0000071e  000007b2  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000004  00800082  00800082  000007d4  2**0
+  2 .bss          00000004  0080008a  0080008a  000007dc  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  000007d4  2**0
+  3 .comment      00000030  00000000  00000000  000007dc  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000804  2**2
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000080c  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000150  00000000  00000000  00000840  2**0
+  5 .debug_aranges 00000158  00000000  00000000  00000848  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00002310  00000000  00000000  00000990  2**0
+  6 .debug_info   000023c1  00000000  00000000  000009a0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000b37  00000000  00000000  00002ca0  2**0
+  7 .debug_abbrev 00000b7e  00000000  00000000  00002d61  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000e6a  00000000  00000000  000037d7  2**0
+  8 .debug_line   00000ebf  00000000  00000000  000038df  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000334  00000000  00000000  00004644  2**2
+  9 .debug_frame  00000344  00000000  00000000  000047a0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000647  00000000  00000000  00004978  2**0
+ 10 .debug_str    00000661  00000000  00000000  00004ae4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00001741  00000000  00000000  00004fbf  2**0
+ 11 .debug_loc    000017af  00000000  00000000  00005145  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000118  00000000  00000000  00006700  2**0
+ 12 .debug_ranges 00000120  00000000  00000000  000068f4  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -72,13 +72,13 @@ Disassembly of section .text:
   6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
   6c:	05 90       	lpm	r0, Z+
   6e:	0d 92       	st	X+, r0
-  70:	a2 38       	cpi	r26, 0x82	; 130
+  70:	aa 38       	cpi	r26, 0x8A	; 138
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
 
 00000076 <__do_clear_bss>:
   76:	20 e0       	ldi	r18, 0x00	; 0
-  78:	a2 e8       	ldi	r26, 0x82	; 130
+  78:	aa e8       	ldi	r26, 0x8A	; 138
   7a:	b0 e0       	ldi	r27, 0x00	; 0
   7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
 
@@ -86,7 +86,7 @@ Disassembly of section .text:
   7e:	1d 92       	st	X+, r1
 
 00000080 <.do_clear_bss_start>:
-  80:	a6 38       	cpi	r26, 0x86	; 134
+  80:	ae 38       	cpi	r26, 0x8E	; 142
   82:	b2 07       	cpc	r27, r18
   84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
   86:	0e 94 49 00 	call	0x92	; 0x92 <main>
@@ -96,7 +96,7 @@ Disassembly of section .text:
   8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 00000092 <main>:
-#include <stdlib.h>
+u16 UART_RX_VALUE; //UART Receive value
 
 int main(void)
 {
@@ -773,8 +773,8 @@ u8 TWI_Read_NAck(u8 *rxData){
  4e4:	10 f4       	brcc	.+4      	; 0x4ea <malloc+0x12>
  4e6:	82 e0       	ldi	r24, 0x02	; 2
  4e8:	90 e0       	ldi	r25, 0x00	; 0
- 4ea:	e0 91 84 00 	lds	r30, 0x0084	; 0x800084 <__flp>
- 4ee:	f0 91 85 00 	lds	r31, 0x0085	; 0x800085 <__flp+0x1>
+ 4ea:	e0 91 8c 00 	lds	r30, 0x008C	; 0x80008c <__flp>
+ 4ee:	f0 91 8d 00 	lds	r31, 0x008D	; 0x80008d <__flp+0x1>
  4f2:	20 e0       	ldi	r18, 0x00	; 0
  4f4:	30 e0       	ldi	r19, 0x00	; 0
  4f6:	a0 e0       	ldi	r26, 0x00	; 0
@@ -799,8 +799,8 @@ u8 TWI_Read_NAck(u8 *rxData){
  51c:	13 96       	adiw	r26, 0x03	; 3
  51e:	1c 93       	st	X, r17
  520:	27 c0       	rjmp	.+78     	; 0x570 <malloc+0x98>
- 522:	00 93 84 00 	sts	0x0084, r16	; 0x800084 <__flp>
- 526:	10 93 85 00 	sts	0x0085, r17	; 0x800085 <__flp+0x1>
+ 522:	00 93 8c 00 	sts	0x008C, r16	; 0x80008c <__flp>
+ 526:	10 93 8d 00 	sts	0x008D, r17	; 0x80008d <__flp+0x1>
  52a:	22 c0       	rjmp	.+68     	; 0x570 <malloc+0x98>
  52c:	21 15       	cp	r18, r1
  52e:	31 05       	cpc	r19, r1
@@ -831,8 +831,8 @@ u8 TWI_Read_NAck(u8 *rxData){
  560:	93 83       	std	Z+3, r25	; 0x03
  562:	82 83       	std	Z+2, r24	; 0x02
  564:	04 c0       	rjmp	.+8      	; 0x56e <malloc+0x96>
- 566:	90 93 85 00 	sts	0x0085, r25	; 0x800085 <__flp+0x1>
- 56a:	80 93 84 00 	sts	0x0084, r24	; 0x800084 <__flp>
+ 566:	90 93 8d 00 	sts	0x008D, r25	; 0x80008d <__flp+0x1>
+ 56a:	80 93 8c 00 	sts	0x008C, r24	; 0x80008c <__flp>
  56e:	fe 01       	movw	r30, r28
  570:	32 96       	adiw	r30, 0x02	; 2
  572:	44 c0       	rjmp	.+136    	; 0x5fc <malloc+0x124>
@@ -846,14 +846,14 @@ u8 TWI_Read_NAck(u8 *rxData){
  582:	39 83       	std	Y+1, r19	; 0x01
  584:	28 83       	st	Y, r18
  586:	3a c0       	rjmp	.+116    	; 0x5fc <malloc+0x124>
- 588:	20 91 82 00 	lds	r18, 0x0082	; 0x800082 <__data_end>
- 58c:	30 91 83 00 	lds	r19, 0x0083	; 0x800083 <__data_end+0x1>
+ 588:	20 91 8a 00 	lds	r18, 0x008A	; 0x80008a <__data_end>
+ 58c:	30 91 8b 00 	lds	r19, 0x008B	; 0x80008b <__data_end+0x1>
  590:	23 2b       	or	r18, r19
  592:	41 f4       	brne	.+16     	; 0x5a4 <malloc+0xcc>
  594:	20 91 62 00 	lds	r18, 0x0062	; 0x800062 <__malloc_heap_start>
  598:	30 91 63 00 	lds	r19, 0x0063	; 0x800063 <__malloc_heap_start+0x1>
- 59c:	30 93 83 00 	sts	0x0083, r19	; 0x800083 <__data_end+0x1>
- 5a0:	20 93 82 00 	sts	0x0082, r18	; 0x800082 <__data_end>
+ 59c:	30 93 8b 00 	sts	0x008B, r19	; 0x80008b <__data_end+0x1>
+ 5a0:	20 93 8a 00 	sts	0x008A, r18	; 0x80008a <__data_end>
  5a4:	20 91 60 00 	lds	r18, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
  5a8:	30 91 61 00 	lds	r19, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
  5ac:	21 15       	cp	r18, r1
@@ -865,8 +865,8 @@ u8 TWI_Read_NAck(u8 *rxData){
  5ba:	50 91 65 00 	lds	r21, 0x0065	; 0x800065 <__malloc_margin+0x1>
  5be:	24 1b       	sub	r18, r20
  5c0:	35 0b       	sbc	r19, r21
- 5c2:	e0 91 82 00 	lds	r30, 0x0082	; 0x800082 <__data_end>
- 5c6:	f0 91 83 00 	lds	r31, 0x0083	; 0x800083 <__data_end+0x1>
+ 5c2:	e0 91 8a 00 	lds	r30, 0x008A	; 0x80008a <__data_end>
+ 5c6:	f0 91 8b 00 	lds	r31, 0x008B	; 0x80008b <__data_end+0x1>
  5ca:	e2 17       	cp	r30, r18
  5cc:	f3 07       	cpc	r31, r19
  5ce:	a0 f4       	brcc	.+40     	; 0x5f8 <malloc+0x120>
@@ -883,8 +883,8 @@ u8 TWI_Read_NAck(u8 *rxData){
  5e4:	48 f0       	brcs	.+18     	; 0x5f8 <malloc+0x120>
  5e6:	4e 0f       	add	r20, r30
  5e8:	5f 1f       	adc	r21, r31
- 5ea:	50 93 83 00 	sts	0x0083, r21	; 0x800083 <__data_end+0x1>
- 5ee:	40 93 82 00 	sts	0x0082, r20	; 0x800082 <__data_end>
+ 5ea:	50 93 8b 00 	sts	0x008B, r21	; 0x80008b <__data_end+0x1>
+ 5ee:	40 93 8a 00 	sts	0x008A, r20	; 0x80008a <__data_end>
  5f2:	81 93       	st	Z+, r24
  5f4:	91 93       	st	Z+, r25
  5f6:	02 c0       	rjmp	.+4      	; 0x5fc <malloc+0x124>
@@ -907,21 +907,21 @@ u8 TWI_Read_NAck(u8 *rxData){
  614:	32 97       	sbiw	r30, 0x02	; 2
  616:	13 82       	std	Z+3, r1	; 0x03
  618:	12 82       	std	Z+2, r1	; 0x02
- 61a:	a0 91 84 00 	lds	r26, 0x0084	; 0x800084 <__flp>
- 61e:	b0 91 85 00 	lds	r27, 0x0085	; 0x800085 <__flp+0x1>
+ 61a:	a0 91 8c 00 	lds	r26, 0x008C	; 0x80008c <__flp>
+ 61e:	b0 91 8d 00 	lds	r27, 0x008D	; 0x80008d <__flp+0x1>
  622:	10 97       	sbiw	r26, 0x00	; 0
  624:	81 f4       	brne	.+32     	; 0x646 <free+0x3e>
  626:	20 81       	ld	r18, Z
  628:	31 81       	ldd	r19, Z+1	; 0x01
  62a:	82 0f       	add	r24, r18
  62c:	93 1f       	adc	r25, r19
- 62e:	20 91 82 00 	lds	r18, 0x0082	; 0x800082 <__data_end>
- 632:	30 91 83 00 	lds	r19, 0x0083	; 0x800083 <__data_end+0x1>
+ 62e:	20 91 8a 00 	lds	r18, 0x008A	; 0x80008a <__data_end>
+ 632:	30 91 8b 00 	lds	r19, 0x008B	; 0x80008b <__data_end+0x1>
  636:	28 17       	cp	r18, r24
  638:	39 07       	cpc	r19, r25
  63a:	51 f5       	brne	.+84     	; 0x690 <free+0x88>
- 63c:	f0 93 83 00 	sts	0x0083, r31	; 0x800083 <__data_end+0x1>
- 640:	e0 93 82 00 	sts	0x0082, r30	; 0x800082 <__data_end>
+ 63c:	f0 93 8b 00 	sts	0x008B, r31	; 0x80008b <__data_end+0x1>
+ 640:	e0 93 8a 00 	sts	0x008A, r30	; 0x80008a <__data_end>
  644:	67 c0       	rjmp	.+206    	; 0x714 <free+0x10c>
  646:	ed 01       	movw	r28, r26
  648:	20 e0       	ldi	r18, 0x00	; 0
@@ -960,8 +960,8 @@ u8 TWI_Read_NAck(u8 *rxData){
  68a:	21 15       	cp	r18, r1
  68c:	31 05       	cpc	r19, r1
  68e:	29 f4       	brne	.+10     	; 0x69a <free+0x92>
- 690:	f0 93 85 00 	sts	0x0085, r31	; 0x800085 <__flp+0x1>
- 694:	e0 93 84 00 	sts	0x0084, r30	; 0x800084 <__flp>
+ 690:	f0 93 8d 00 	sts	0x008D, r31	; 0x80008d <__flp+0x1>
+ 694:	e0 93 8c 00 	sts	0x008C, r30	; 0x80008c <__flp>
  698:	3d c0       	rjmp	.+122    	; 0x714 <free+0x10c>
  69a:	e9 01       	movw	r28, r18
  69c:	fb 83       	std	Y+3, r31	; 0x03
@@ -1004,20 +1004,20 @@ u8 TWI_Read_NAck(u8 *rxData){
  6e6:	3f 4f       	sbci	r19, 0xFF	; 255
  6e8:	82 0f       	add	r24, r18
  6ea:	93 1f       	adc	r25, r19
- 6ec:	20 91 82 00 	lds	r18, 0x0082	; 0x800082 <__data_end>
- 6f0:	30 91 83 00 	lds	r19, 0x0083	; 0x800083 <__data_end+0x1>
+ 6ec:	20 91 8a 00 	lds	r18, 0x008A	; 0x80008a <__data_end>
+ 6f0:	30 91 8b 00 	lds	r19, 0x008B	; 0x80008b <__data_end+0x1>
  6f4:	28 17       	cp	r18, r24
  6f6:	39 07       	cpc	r19, r25
  6f8:	69 f4       	brne	.+26     	; 0x714 <free+0x10c>
  6fa:	30 97       	sbiw	r30, 0x00	; 0
  6fc:	29 f4       	brne	.+10     	; 0x708 <free+0x100>
- 6fe:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__flp+0x1>
- 702:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__flp>
+ 6fe:	10 92 8d 00 	sts	0x008D, r1	; 0x80008d <__flp+0x1>
+ 702:	10 92 8c 00 	sts	0x008C, r1	; 0x80008c <__flp>
  706:	02 c0       	rjmp	.+4      	; 0x70c <free+0x104>
  708:	13 82       	std	Z+3, r1	; 0x03
  70a:	12 82       	std	Z+2, r1	; 0x02
- 70c:	b0 93 83 00 	sts	0x0083, r27	; 0x800083 <__data_end+0x1>
- 710:	a0 93 82 00 	sts	0x0082, r26	; 0x800082 <__data_end>
+ 70c:	b0 93 8b 00 	sts	0x008B, r27	; 0x80008b <__data_end+0x1>
+ 710:	a0 93 8a 00 	sts	0x008A, r26	; 0x80008a <__data_end>
  714:	df 91       	pop	r29
  716:	cf 91       	pop	r28
  718:	08 95       	ret
