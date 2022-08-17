@@ -25,7 +25,10 @@ void ServoMotor_Rotate(u8 angle) {
 }
 
 void ServoMotor_OpenDoor(void) {
-	ServoMotor_Rotate(Angle_AC90);
-	_delay_ms(3000); //Wait for user to enter
-	ServoMotor_Rotate(Angle_0);
+	ServoMotor_Rotate(Angle_AC90); //Set Servo's starting position
+	_delay_ms(250); 
+	ServoMotor_Rotate(Angle_0); //Open the door
+	_delay_ms(3500); //Wait for user to enter
+	ServoMotor_Rotate(Angle_AC90); //Return to starting position
+	_delay_ms(250);
 }
