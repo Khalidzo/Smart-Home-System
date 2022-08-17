@@ -23,3 +23,9 @@ void ServoMotor_Init(void) {
 void ServoMotor_Rotate(u8 angle) {
 	OCR1A = ((ICR1*angle) / 100) - 1;
 }
+
+void ServoMotor_OpenDoor(void) {
+	ServoMotor_Rotate(Angle_AC90);
+	_delay_ms(3000); //Wait for user to enter
+	ServoMotor_Rotate(Angle_0);
+}
