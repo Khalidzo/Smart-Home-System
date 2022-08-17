@@ -16,5 +16,6 @@ typedef enum {
 /******************************************_PROTOTYPES_***************************************/
 void ServoMotor_Rotate(u8 angle);
 void ServoMotor_Init(void);
+void ServoMotor_OpenDoor(void);
 
 #endif /* SERVOMOTOR_H_ */
