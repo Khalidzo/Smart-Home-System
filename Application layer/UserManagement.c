@@ -127,7 +127,7 @@ void enterPassword(u8 userNumber) {
 	if(nTrials < 3) {
 		LCD_Clear();
 		LCD_WriteString("Welcome home!");
-		//Open door using servo motor
+		ServoMotor_OpenDoor();
 		_delay_ms(1500);
 		LCD_Clear();
 	}

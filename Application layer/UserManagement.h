@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <avr/io.h>
 #include "string.h"
+#include "ServoMotor.h"
 /*******************************************_MACROS_***************************************/
 #define USER1 1
 #define USER2 2

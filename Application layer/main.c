@@ -14,6 +14,12 @@
 
 u16 UART_RX_VALUE; //UART Receive value
 
+/************************************************************************
+ USER1 NAME: Khaled   USERPASSWORD: 1111
+ USER2 NAME: Ahmed    USERPASSWORD: 4206
+ USER3 NAME: Kitty    USERPASSWORD: 8012                                                                   
+************************************************************************/
+
 int main(void)
 {
 	
