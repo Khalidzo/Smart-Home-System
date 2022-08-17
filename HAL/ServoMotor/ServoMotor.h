@@ -7,6 +7,8 @@
 #include "BitMath.h"
 #include <avr/io.h>
 #include "StdTypes.h"
+#define F_CPU 16000000
+#include "util\delay.h"
 
 typedef enum {
 	Angle_0 = 5,
