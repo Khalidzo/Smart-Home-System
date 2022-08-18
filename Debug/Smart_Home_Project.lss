@@ -5,29 +5,29 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         00000db6  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         000000a0  00800060  00000db6  00000e4a  2**0
+  1 .data         0000009e  00800060  00000db6  00000e4a  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000008  00800100  00800100  00000eea  2**0
+  2 .bss          00000008  008000fe  008000fe  00000ee8  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  00000eea  2**0
+  3 .comment      00000030  00000000  00000000  00000ee8  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000f1c  2**2
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000f18  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 000002c0  00000000  00000000  00000f58  2**0
+  5 .debug_aranges 000002c0  00000000  00000000  00000f54  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00002e45  00000000  00000000  00001218  2**0
+  6 .debug_info   00002e33  00000000  00000000  00001214  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00001238  00000000  00000000  0000405d  2**0
+  7 .debug_abbrev 00001238  00000000  00000000  00004047  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00001946  00000000  00000000  00005295  2**0
+  8 .debug_line   00001947  00000000  00000000  0000527f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000005b0  00000000  00000000  00006bdc  2**2
+  9 .debug_frame  000005b0  00000000  00000000  00006bc8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000008a5  00000000  00000000  0000718c  2**0
+ 10 .debug_str    0000089f  00000000  00000000  00007178  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00001a90  00000000  00000000  00007a31  2**0
+ 11 .debug_loc    00001a90  00000000  00000000  00007a17  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000208  00000000  00000000  000094c1  2**0
+ 12 .debug_ranges 00000208  00000000  00000000  000094a7  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -64,7 +64,7 @@ Disassembly of section .text:
   5e:	cd bf       	out	0x3d, r28	; 61
 
 00000060 <__do_copy_data>:
-  60:	11 e0       	ldi	r17, 0x01	; 1
+  60:	10 e0       	ldi	r17, 0x00	; 0
   62:	a0 e6       	ldi	r26, 0x60	; 96
   64:	b0 e0       	ldi	r27, 0x00	; 0
   66:	e6 eb       	ldi	r30, 0xB6	; 182
@@ -72,21 +72,21 @@ Disassembly of section .text:
   6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
   6c:	05 90       	lpm	r0, Z+
   6e:	0d 92       	st	X+, r0
-  70:	a0 30       	cpi	r26, 0x00	; 0
+  70:	ae 3f       	cpi	r26, 0xFE	; 254
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
 
 00000076 <__do_clear_bss>:
   76:	21 e0       	ldi	r18, 0x01	; 1
-  78:	a0 e0       	ldi	r26, 0x00	; 0
-  7a:	b1 e0       	ldi	r27, 0x01	; 1
+  78:	ae ef       	ldi	r26, 0xFE	; 254
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
   7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
 
 0000007e <.do_clear_bss_loop>:
   7e:	1d 92       	st	X+, r1
 
 00000080 <.do_clear_bss_start>:
-  80:	a8 30       	cpi	r26, 0x08	; 8
+  80:	a6 30       	cpi	r26, 0x06	; 6
   82:	b2 07       	cpc	r27, r18
   84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
   86:	0e 94 79 00 	call	0xf2	; 0xf2 <main>
@@ -123,7 +123,7 @@ void sendWelcomeMessage(void) {
   aa:	90 e0       	ldi	r25, 0x00	; 0
   ac:	0e 94 3a 04 	call	0x874	; 0x874 <LCD_GoTo>
 	LCD_WriteString("2022/08/18");
-  b0:	8e e6       	ldi	r24, 0x6E	; 110
+  b0:	8c e6       	ldi	r24, 0x6C	; 108
   b2:	90 e0       	ldi	r25, 0x00	; 0
   b4:	0e 94 8e 03 	call	0x71c	; 0x71c <LCD_WriteString>
   b8:	08 95       	ret
@@ -149,7 +149,7 @@ void displayTemperature(void) {
   d2:	90 e0       	ldi	r25, 0x00	; 0
   d4:	0e 94 3a 04 	call	0x874	; 0x874 <LCD_GoTo>
 	LCD_WriteString("Temperature ");
-  d8:	89 e7       	ldi	r24, 0x79	; 121
+  d8:	87 e7       	ldi	r24, 0x77	; 119
   da:	90 e0       	ldi	r25, 0x00	; 0
   dc:	0e 94 8e 03 	call	0x71c	; 0x71c <LCD_WriteString>
 	LCD_WriteNumber(TempSensor_Read());
@@ -228,8 +228,8 @@ ISR(USART_RXC_vect){
 	UART_RX_VALUE = UDR;
  14c:	8c b1       	in	r24, 0x0c	; 12
  14e:	90 e0       	ldi	r25, 0x00	; 0
- 150:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <UART_RX_VALUE+0x1>
- 154:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <UART_RX_VALUE>
+ 150:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <UART_RX_VALUE+0x1>
+ 154:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <UART_RX_VALUE>
 	
 	switch(UART_RX_VALUE) {
  158:	82 34       	cpi	r24, 0x42	; 66
@@ -302,7 +302,7 @@ ISR(USART_RXC_vect){
  1b4:	cf 93       	push	r28
  1b6:	e8 2f       	mov	r30, r24
  1b8:	f0 e0       	ldi	r31, 0x00	; 0
- 1ba:	e7 59       	subi	r30, 0x97	; 151
+ 1ba:	e8 59       	subi	r30, 0x98	; 152
  1bc:	ff 4f       	sbci	r31, 0xFF	; 255
  1be:	c0 81       	ld	r28, Z
  1c0:	88 e0       	ldi	r24, 0x08	; 8
@@ -471,7 +471,7 @@ u8* receivePassword(void) {
 	u8* password = tmpPassowrd;
 	u8 rChar;
 	LCD_WriteString("Enter password:");
- 2bc:	86 e8       	ldi	r24, 0x86	; 134
+ 2bc:	84 e8       	ldi	r24, 0x84	; 132
  2be:	90 e0       	ldi	r25, 0x00	; 0
  2c0:	0e 94 8e 03 	call	0x71c	; 0x71c <LCD_WriteString>
 
@@ -569,7 +569,7 @@ void enterPassword(u8 userNumber) {
  322:	cf 93       	push	r28
  324:	c8 2f       	mov	r28, r24
 	LCD_WriteString("Welcome ");
- 326:	86 e9       	ldi	r24, 0x96	; 150
+ 326:	84 e9       	ldi	r24, 0x94	; 148
  328:	90 e0       	ldi	r25, 0x00	; 0
  32a:	0e 94 8e 03 	call	0x71c	; 0x71c <LCD_WriteString>
 	LCD_WriteString(getName(userNumber));
@@ -606,11 +606,11 @@ void enterPassword(u8 userNumber) {
 		LCD_Clear();
  36a:	0e 94 36 04 	call	0x86c	; 0x86c <LCD_Clear>
 		LCD_WriteString("Wrong Password");
- 36e:	8f e9       	ldi	r24, 0x9F	; 159
+ 36e:	8d e9       	ldi	r24, 0x9D	; 157
  370:	90 e0       	ldi	r25, 0x00	; 0
  372:	0e 94 8e 03 	call	0x71c	; 0x71c <LCD_WriteString>
 		Blutooth_SendString("Wrong Password");
- 376:	8f e9       	ldi	r24, 0x9F	; 159
+ 376:	8d e9       	ldi	r24, 0x9D	; 157
  378:	90 e0       	ldi	r25, 0x00	; 0
  37a:	0e 94 11 02 	call	0x422	; 0x422 <Blutooth_SendString>
 		Bluetooth_SendByte('\n');
@@ -629,11 +629,11 @@ void enterPassword(u8 userNumber) {
 		LCD_Clear();
  396:	0e 94 36 04 	call	0x86c	; 0x86c <LCD_Clear>
 		LCD_WriteString("Try again!");
- 39a:	8e ea       	ldi	r24, 0xAE	; 174
+ 39a:	8c ea       	ldi	r24, 0xAC	; 172
  39c:	90 e0       	ldi	r25, 0x00	; 0
  39e:	0e 94 8e 03 	call	0x71c	; 0x71c <LCD_WriteString>
 		Blutooth_SendString("Try again!");
- 3a2:	8e ea       	ldi	r24, 0xAE	; 174
+ 3a2:	8c ea       	ldi	r24, 0xAC	; 172
  3a4:	90 e0       	ldi	r25, 0x00	; 0
  3a6:	0e 94 11 02 	call	0x422	; 0x422 <Blutooth_SendString>
 		Bluetooth_SendByte('\n');
@@ -664,18 +664,18 @@ void enterPassword(u8 userNumber) {
 		LCD_Clear();
  3ce:	0e 94 36 04 	call	0x86c	; 0x86c <LCD_Clear>
 		LCD_WriteString("Welcome home!");
- 3d2:	89 eb       	ldi	r24, 0xB9	; 185
+ 3d2:	87 eb       	ldi	r24, 0xB7	; 183
  3d4:	90 e0       	ldi	r25, 0x00	; 0
  3d6:	0e 94 8e 03 	call	0x71c	; 0x71c <LCD_WriteString>
 		Blutooth_SendString("Welcome!");
- 3da:	87 ec       	ldi	r24, 0xC7	; 199
+ 3da:	85 ec       	ldi	r24, 0xC5	; 197
  3dc:	90 e0       	ldi	r25, 0x00	; 0
  3de:	0e 94 11 02 	call	0x422	; 0x422 <Blutooth_SendString>
 		Bluetooth_SendByte('\n');
  3e2:	8a e0       	ldi	r24, 0x0A	; 10
  3e4:	0e 94 0e 02 	call	0x41c	; 0x41c <Bluetooth_SendByte>
 		Blutooth_SendString("The door is open");
- 3e8:	80 ed       	ldi	r24, 0xD0	; 208
+ 3e8:	8e ec       	ldi	r24, 0xCE	; 206
  3ea:	90 e0       	ldi	r25, 0x00	; 0
  3ec:	0e 94 11 02 	call	0x422	; 0x422 <Blutooth_SendString>
 		Bluetooth_SendByte('\n');
@@ -811,7 +811,7 @@ void Buzzer_SetAlarm(void){
  48c:	00 00       	nop
 	_delay_ms(2000);
 	LCD_WriteString("Login Failure");
- 48e:	81 ee       	ldi	r24, 0xE1	; 225
+ 48e:	8f ed       	ldi	r24, 0xDF	; 223
  490:	90 e0       	ldi	r25, 0x00	; 0
  492:	0e 94 8e 03 	call	0x71c	; 0x71c <LCD_WriteString>
  496:	2f e7       	ldi	r18, 0x7F	; 127
@@ -827,7 +827,7 @@ void Buzzer_SetAlarm(void){
 	LCD_Clear();
  4a8:	0e 94 36 04 	call	0x86c	; 0x86c <LCD_Clear>
 	LCD_WriteString("System Alarm ON!");
- 4ac:	8f ee       	ldi	r24, 0xEF	; 239
+ 4ac:	8d ee       	ldi	r24, 0xED	; 237
  4ae:	90 e0       	ldi	r25, 0x00	; 0
  4b0:	0e 94 8e 03 	call	0x71c	; 0x71c <LCD_WriteString>
  4b4:	2f ed       	ldi	r18, 0xDF	; 223
@@ -1793,8 +1793,8 @@ ISR(ADC_vect)
 	x = ADC_VALUE;
  a10:	84 b1       	in	r24, 0x04	; 4
  a12:	95 b1       	in	r25, 0x05	; 5
- a14:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_end+0x1>
- a18:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_end>
+ a14:	90 93 ff 00 	sts	0x00FF, r25	; 0x8000ff <__data_end+0x1>
+ a18:	80 93 fe 00 	sts	0x00FE, r24	; 0x8000fe <__data_end>
 }
  a1c:	9f 91       	pop	r25
  a1e:	8f 91       	pop	r24
@@ -2035,8 +2035,8 @@ void UART_Transmit(u8 Data) {
  b6a:	10 f4       	brcc	.+4      	; 0xb70 <malloc+0x12>
  b6c:	82 e0       	ldi	r24, 0x02	; 2
  b6e:	90 e0       	ldi	r25, 0x00	; 0
- b70:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <__flp>
- b74:	f0 91 07 01 	lds	r31, 0x0107	; 0x800107 <__flp+0x1>
+ b70:	e0 91 04 01 	lds	r30, 0x0104	; 0x800104 <__flp>
+ b74:	f0 91 05 01 	lds	r31, 0x0105	; 0x800105 <__flp+0x1>
  b78:	20 e0       	ldi	r18, 0x00	; 0
  b7a:	30 e0       	ldi	r19, 0x00	; 0
  b7c:	a0 e0       	ldi	r26, 0x00	; 0
@@ -2061,8 +2061,8 @@ void UART_Transmit(u8 Data) {
  ba2:	13 96       	adiw	r26, 0x03	; 3
  ba4:	1c 93       	st	X, r17
  ba6:	27 c0       	rjmp	.+78     	; 0xbf6 <malloc+0x98>
- ba8:	00 93 06 01 	sts	0x0106, r16	; 0x800106 <__flp>
- bac:	10 93 07 01 	sts	0x0107, r17	; 0x800107 <__flp+0x1>
+ ba8:	00 93 04 01 	sts	0x0104, r16	; 0x800104 <__flp>
+ bac:	10 93 05 01 	sts	0x0105, r17	; 0x800105 <__flp+0x1>
  bb0:	22 c0       	rjmp	.+68     	; 0xbf6 <malloc+0x98>
  bb2:	21 15       	cp	r18, r1
  bb4:	31 05       	cpc	r19, r1
@@ -2093,8 +2093,8 @@ void UART_Transmit(u8 Data) {
  be6:	93 83       	std	Z+3, r25	; 0x03
  be8:	82 83       	std	Z+2, r24	; 0x02
  bea:	04 c0       	rjmp	.+8      	; 0xbf4 <malloc+0x96>
- bec:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <__flp+0x1>
- bf0:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <__flp>
+ bec:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <__flp+0x1>
+ bf0:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <__flp>
  bf4:	fe 01       	movw	r30, r28
  bf6:	32 96       	adiw	r30, 0x02	; 2
  bf8:	44 c0       	rjmp	.+136    	; 0xc82 <malloc+0x124>
@@ -2108,14 +2108,14 @@ void UART_Transmit(u8 Data) {
  c08:	39 83       	std	Y+1, r19	; 0x01
  c0a:	28 83       	st	Y, r18
  c0c:	3a c0       	rjmp	.+116    	; 0xc82 <malloc+0x124>
- c0e:	20 91 04 01 	lds	r18, 0x0104	; 0x800104 <__brkval>
- c12:	30 91 05 01 	lds	r19, 0x0105	; 0x800105 <__brkval+0x1>
+ c0e:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <__brkval>
+ c12:	30 91 03 01 	lds	r19, 0x0103	; 0x800103 <__brkval+0x1>
  c16:	23 2b       	or	r18, r19
  c18:	41 f4       	brne	.+16     	; 0xc2a <malloc+0xcc>
  c1a:	20 91 62 00 	lds	r18, 0x0062	; 0x800062 <__malloc_heap_start>
  c1e:	30 91 63 00 	lds	r19, 0x0063	; 0x800063 <__malloc_heap_start+0x1>
- c22:	30 93 05 01 	sts	0x0105, r19	; 0x800105 <__brkval+0x1>
- c26:	20 93 04 01 	sts	0x0104, r18	; 0x800104 <__brkval>
+ c22:	30 93 03 01 	sts	0x0103, r19	; 0x800103 <__brkval+0x1>
+ c26:	20 93 02 01 	sts	0x0102, r18	; 0x800102 <__brkval>
  c2a:	20 91 60 00 	lds	r18, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
  c2e:	30 91 61 00 	lds	r19, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
  c32:	21 15       	cp	r18, r1
@@ -2127,8 +2127,8 @@ void UART_Transmit(u8 Data) {
  c40:	50 91 65 00 	lds	r21, 0x0065	; 0x800065 <__malloc_margin+0x1>
  c44:	24 1b       	sub	r18, r20
  c46:	35 0b       	sbc	r19, r21
- c48:	e0 91 04 01 	lds	r30, 0x0104	; 0x800104 <__brkval>
- c4c:	f0 91 05 01 	lds	r31, 0x0105	; 0x800105 <__brkval+0x1>
+ c48:	e0 91 02 01 	lds	r30, 0x0102	; 0x800102 <__brkval>
+ c4c:	f0 91 03 01 	lds	r31, 0x0103	; 0x800103 <__brkval+0x1>
  c50:	e2 17       	cp	r30, r18
  c52:	f3 07       	cpc	r31, r19
  c54:	a0 f4       	brcc	.+40     	; 0xc7e <malloc+0x120>
@@ -2145,8 +2145,8 @@ void UART_Transmit(u8 Data) {
  c6a:	48 f0       	brcs	.+18     	; 0xc7e <malloc+0x120>
  c6c:	4e 0f       	add	r20, r30
  c6e:	5f 1f       	adc	r21, r31
- c70:	50 93 05 01 	sts	0x0105, r21	; 0x800105 <__brkval+0x1>
- c74:	40 93 04 01 	sts	0x0104, r20	; 0x800104 <__brkval>
+ c70:	50 93 03 01 	sts	0x0103, r21	; 0x800103 <__brkval+0x1>
+ c74:	40 93 02 01 	sts	0x0102, r20	; 0x800102 <__brkval>
  c78:	81 93       	st	Z+, r24
  c7a:	91 93       	st	Z+, r25
  c7c:	02 c0       	rjmp	.+4      	; 0xc82 <malloc+0x124>
@@ -2169,21 +2169,21 @@ void UART_Transmit(u8 Data) {
  c9a:	32 97       	sbiw	r30, 0x02	; 2
  c9c:	13 82       	std	Z+3, r1	; 0x03
  c9e:	12 82       	std	Z+2, r1	; 0x02
- ca0:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <__flp>
- ca4:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <__flp+0x1>
+ ca0:	a0 91 04 01 	lds	r26, 0x0104	; 0x800104 <__flp>
+ ca4:	b0 91 05 01 	lds	r27, 0x0105	; 0x800105 <__flp+0x1>
  ca8:	10 97       	sbiw	r26, 0x00	; 0
  caa:	81 f4       	brne	.+32     	; 0xccc <free+0x3e>
  cac:	20 81       	ld	r18, Z
  cae:	31 81       	ldd	r19, Z+1	; 0x01
  cb0:	82 0f       	add	r24, r18
  cb2:	93 1f       	adc	r25, r19
- cb4:	20 91 04 01 	lds	r18, 0x0104	; 0x800104 <__brkval>
- cb8:	30 91 05 01 	lds	r19, 0x0105	; 0x800105 <__brkval+0x1>
+ cb4:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <__brkval>
+ cb8:	30 91 03 01 	lds	r19, 0x0103	; 0x800103 <__brkval+0x1>
  cbc:	28 17       	cp	r18, r24
  cbe:	39 07       	cpc	r19, r25
  cc0:	51 f5       	brne	.+84     	; 0xd16 <free+0x88>
- cc2:	f0 93 05 01 	sts	0x0105, r31	; 0x800105 <__brkval+0x1>
- cc6:	e0 93 04 01 	sts	0x0104, r30	; 0x800104 <__brkval>
+ cc2:	f0 93 03 01 	sts	0x0103, r31	; 0x800103 <__brkval+0x1>
+ cc6:	e0 93 02 01 	sts	0x0102, r30	; 0x800102 <__brkval>
  cca:	67 c0       	rjmp	.+206    	; 0xd9a <free+0x10c>
  ccc:	ed 01       	movw	r28, r26
  cce:	20 e0       	ldi	r18, 0x00	; 0
@@ -2222,8 +2222,8 @@ void UART_Transmit(u8 Data) {
  d10:	21 15       	cp	r18, r1
  d12:	31 05       	cpc	r19, r1
  d14:	29 f4       	brne	.+10     	; 0xd20 <free+0x92>
- d16:	f0 93 07 01 	sts	0x0107, r31	; 0x800107 <__flp+0x1>
- d1a:	e0 93 06 01 	sts	0x0106, r30	; 0x800106 <__flp>
+ d16:	f0 93 05 01 	sts	0x0105, r31	; 0x800105 <__flp+0x1>
+ d1a:	e0 93 04 01 	sts	0x0104, r30	; 0x800104 <__flp>
  d1e:	3d c0       	rjmp	.+122    	; 0xd9a <free+0x10c>
  d20:	e9 01       	movw	r28, r18
  d22:	fb 83       	std	Y+3, r31	; 0x03
@@ -2266,20 +2266,20 @@ void UART_Transmit(u8 Data) {
  d6c:	3f 4f       	sbci	r19, 0xFF	; 255
  d6e:	82 0f       	add	r24, r18
  d70:	93 1f       	adc	r25, r19
- d72:	20 91 04 01 	lds	r18, 0x0104	; 0x800104 <__brkval>
- d76:	30 91 05 01 	lds	r19, 0x0105	; 0x800105 <__brkval+0x1>
+ d72:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <__brkval>
+ d76:	30 91 03 01 	lds	r19, 0x0103	; 0x800103 <__brkval+0x1>
  d7a:	28 17       	cp	r18, r24
  d7c:	39 07       	cpc	r19, r25
  d7e:	69 f4       	brne	.+26     	; 0xd9a <free+0x10c>
  d80:	30 97       	sbiw	r30, 0x00	; 0
  d82:	29 f4       	brne	.+10     	; 0xd8e <free+0x100>
- d84:	10 92 07 01 	sts	0x0107, r1	; 0x800107 <__flp+0x1>
- d88:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <__flp>
+ d84:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <__flp+0x1>
+ d88:	10 92 04 01 	sts	0x0104, r1	; 0x800104 <__flp>
  d8c:	02 c0       	rjmp	.+4      	; 0xd92 <free+0x104>
  d8e:	13 82       	std	Z+3, r1	; 0x03
  d90:	12 82       	std	Z+2, r1	; 0x02
- d92:	b0 93 05 01 	sts	0x0105, r27	; 0x800105 <__brkval+0x1>
- d96:	a0 93 04 01 	sts	0x0104, r26	; 0x800104 <__brkval>
+ d92:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__brkval+0x1>
+ d96:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__brkval>
  d9a:	df 91       	pop	r29
  d9c:	cf 91       	pop	r28
  d9e:	08 95       	ret

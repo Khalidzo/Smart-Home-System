@@ -5,12 +5,11 @@
 //Button 2 will log into user 3
 
 
-u8 userNameAddressSpace[4]     = {0x00, 0x08, 0x10}; //3 memory locations (8 bytes each) to store 3 different usernames
-u8 userPasswordAddressSpace[4] = {0x23, 0x27, 0x2C}; //3 memory locations (4 bytes each) to store 3 different passwords
+u8 userNameAddressSpace[3]     = {0x00, 0x08, 0x10}; //3 memory locations (8 bytes each) to store 3 different usernames
+u8 userPasswordAddressSpace[3] = {0x23, 0x27, 0x2C}; //3 memory locations (4 bytes each) to store 3 different passwords
 struct user user1;
 struct user user2;
 struct user user3;
-struct user users[] = {0};
 
 void manageUser(u8* userName, u8* userPassword, u8 userNumber) {
 	switch(userNumber){
