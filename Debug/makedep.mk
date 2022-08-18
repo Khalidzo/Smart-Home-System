@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+Application layer\HomeDisplay.c
+
 Application layer\main.c
 
 Application layer\UserManagement.c

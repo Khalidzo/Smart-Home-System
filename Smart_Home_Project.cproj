@@ -133,6 +133,12 @@
     <Compile Include="Application layer\BitMath.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Application layer\HomeDisplay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Application layer\HomeDisplay.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Application layer\main.c">
       <SubType>compile</SubType>
     </Compile>

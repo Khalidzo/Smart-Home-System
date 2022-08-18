@@ -14,7 +14,12 @@ HAL/TempSensor/TempSensor.d HAL/TempSensor/TempSensor.o: \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  ../Application\ layer/StdTypes.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ../Application\ layer/BitMath.h
+ ../Application\ layer/BitMath.h ../HAL/Buzzer/Buzzer.h \
+ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
+ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
+ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
+ ../HAL/LCD/LCD.h ../HAL/DCMotor/DCMotor.h \
+ ../Application\ layer/Bitmath.h
 
 ../HAL/TempSensor/TempSensor.h:
 
@@ -49,3 +54,17 @@ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.
 d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
 ../Application\ layer/BitMath.h:
+
+../HAL/Buzzer/Buzzer.h:
+
+d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
+
+d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
+
+d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
+
+../HAL/LCD/LCD.h:
+
+../HAL/DCMotor/DCMotor.h:
+
+../Application\ layer/Bitmath.h:

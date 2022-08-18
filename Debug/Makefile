@@ -50,6 +50,7 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../Application\ layer/HomeDisplay.c \
 ../Application\ layer/main.c \
 ../Application\ layer/UserManagement.c \
 ../HAL/Bluetooth/Bluetooth.c \
@@ -71,6 +72,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+Application\ layer/HomeDisplay.o \
 Application\ layer/main.o \
 Application\ layer/UserManagement.o \
 HAL/Bluetooth/Bluetooth.o \
@@ -85,6 +87,7 @@ MCAL/TWI/TWI.o \
 MCAL/UART/UART.o
 
 OBJS_AS_ARGS +=  \
+"Application layer/HomeDisplay.o" \
 "Application layer/main.o" \
 "Application layer/UserManagement.o" \
 HAL/Bluetooth/Bluetooth.o \
@@ -99,6 +102,7 @@ MCAL/TWI/TWI.o \
 MCAL/UART/UART.o
 
 C_DEPS +=  \
+Application\ layer/HomeDisplay.d \
 Application\ layer/main.d \
 Application\ layer/UserManagement.d \
 HAL/Bluetooth/Bluetooth.d \
@@ -113,6 +117,7 @@ MCAL/TWI/TWI.d \
 MCAL/UART/UART.d
 
 C_DEPS_AS_ARGS +=  \
+"Application layer/HomeDisplay.d" \
 "Application layer/main.d" \
 "Application layer/UserManagement.d" \
 HAL/Bluetooth/Bluetooth.d \
@@ -140,6 +145,13 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+Application\ layer/HomeDisplay.o: ../Application\ layer/HomeDisplay.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 Application\ layer/main.o: ../Application\ layer/main.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0

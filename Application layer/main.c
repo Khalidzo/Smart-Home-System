@@ -19,6 +19,7 @@
 u16 UART_RX_VALUE; //Store UART Receive value with each reception
 
 /************************************************************************
+		Burn usernames and password into the EEPROM
  manageUser("Khaled", "1111", USER1);
  manageUser("Ahmed", "4206", USER2);
  manageUser("Kitty", "8012", USER3);
