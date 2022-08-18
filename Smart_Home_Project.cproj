@@ -150,6 +150,12 @@
     <Compile Include="HAL\Bluetooth\Bluetooth.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="HAL\Buzzer\Buzzer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Buzzer\Buzzer.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\DCMotor\DCMotor.c">
       <SubType>compile</SubType>
     </Compile>
@@ -212,6 +218,7 @@
     <Folder Include="HAL\EEPROM" />
     <Folder Include="HAL\Bluetooth" />
     <Folder Include="HAL\DCMotor" />
+    <Folder Include="HAL\Buzzer" />
     <Folder Include="HAL\ServoMotor" />
     <Folder Include="HAL\TempSensor" />
     <Folder Include="MCAL" />

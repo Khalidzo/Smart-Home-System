@@ -39,6 +39,7 @@ SUBDIRS :=  \
 ../HAL/EEPROM \
 ../HAL/Bluetooth \
 ../HAL/DCMotor \
+../HAL/Buzzer \
 ../HAL/ServoMotor \
 ../HAL/TempSensor \
 ../MCAL \
@@ -52,6 +53,7 @@ C_SRCS +=  \
 ../Application\ layer/main.c \
 ../Application\ layer/UserManagement.c \
 ../HAL/Bluetooth/Bluetooth.c \
+../HAL/Buzzer/Buzzer.c \
 ../HAL/DCMotor/DCMotor.c \
 ../HAL/EEPROM/EEPROM.c \
 ../HAL/LCD/LCD.c \
@@ -72,6 +74,7 @@ OBJS +=  \
 Application\ layer/main.o \
 Application\ layer/UserManagement.o \
 HAL/Bluetooth/Bluetooth.o \
+HAL/Buzzer/Buzzer.o \
 HAL/DCMotor/DCMotor.o \
 HAL/EEPROM/EEPROM.o \
 HAL/LCD/LCD.o \
@@ -85,6 +88,7 @@ OBJS_AS_ARGS +=  \
 "Application layer/main.o" \
 "Application layer/UserManagement.o" \
 HAL/Bluetooth/Bluetooth.o \
+HAL/Buzzer/Buzzer.o \
 HAL/DCMotor/DCMotor.o \
 HAL/EEPROM/EEPROM.o \
 HAL/LCD/LCD.o \
@@ -98,6 +102,7 @@ C_DEPS +=  \
 Application\ layer/main.d \
 Application\ layer/UserManagement.d \
 HAL/Bluetooth/Bluetooth.d \
+HAL/Buzzer/Buzzer.d \
 HAL/DCMotor/DCMotor.d \
 HAL/EEPROM/EEPROM.d \
 HAL/LCD/LCD.d \
@@ -111,6 +116,7 @@ C_DEPS_AS_ARGS +=  \
 "Application layer/main.d" \
 "Application layer/UserManagement.d" \
 HAL/Bluetooth/Bluetooth.d \
+HAL/Buzzer/Buzzer.d \
 HAL/DCMotor/DCMotor.d \
 HAL/EEPROM/EEPROM.d \
 HAL/LCD/LCD.d \
@@ -149,6 +155,13 @@ Application\ layer/UserManagement.o: ../Application\ layer/UserManagement.c
 	
 
 HAL/Bluetooth/Bluetooth.o: ../HAL/Bluetooth/Bluetooth.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+HAL/Buzzer/Buzzer.o: ../HAL/Buzzer/Buzzer.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

@@ -95,6 +95,12 @@ Discarded input sections
  .debug_str     0x00000000      0x252 HAL/Bluetooth/Bluetooth.o
  .comment       0x00000000       0x31 HAL/Bluetooth/Bluetooth.o
  .debug_frame   0x00000000       0x60 HAL/Bluetooth/Bluetooth.o
+ .text          0x00000000        0x0 HAL/Buzzer/Buzzer.o
+ .data          0x00000000        0x0 HAL/Buzzer/Buzzer.o
+ .bss           0x00000000        0x0 HAL/Buzzer/Buzzer.o
+ .debug_line    0x00000000        0x0 HAL/Buzzer/Buzzer.o
+ .debug_str     0x00000000       0xfe HAL/Buzzer/Buzzer.o
+ .comment       0x00000000       0x31 HAL/Buzzer/Buzzer.o
  .text          0x00000000        0x0 HAL/DCMotor/DCMotor.o
  .data          0x00000000        0x0 HAL/DCMotor/DCMotor.o
  .bss           0x00000000        0x0 HAL/DCMotor/DCMotor.o
@@ -371,6 +377,7 @@ LOAD D:/Microchip studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr
 LOAD Application layer/main.o
 LOAD Application layer/UserManagement.o
 LOAD HAL/Bluetooth/Bluetooth.o
+LOAD HAL/Buzzer/Buzzer.o
 LOAD HAL/DCMotor/DCMotor.o
 LOAD HAL/EEPROM/EEPROM.o
 LOAD HAL/LCD/LCD.o
