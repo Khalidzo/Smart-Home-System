@@ -1,5 +1,5 @@
 
-
+#include <stdio.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #define F_CPU 16000000
@@ -15,6 +15,7 @@
 #include "UART.h"
 #include <stdlib.h>
 #include "Buzzer.h"
+#include "HomeDisplay.h"
 
 u16 UART_RX_VALUE; //Store UART Receive value with each reception
 
@@ -33,16 +34,21 @@ u16 UART_RX_VALUE; //Store UART Receive value with each reception
 
 int main(void)
 {
-	//Buzzer_Init();
+	/********************_Initializations_*****************/
+	Buzzer_Init();
 	LCD_Init();
 	TWI_Init();
+	UART_Init();
+	DCMotor_Init();
+	ServoMotor_Init();
+	TempSensor_Init();
 	
-	DDRB  &= ~(1<<0);
-	DDRC  |= (1<<2);
 	
 	while(1)
 	{	
-		
+		sendWelcomeMessage();
+		displayTemperature();
+		_delay_ms(500);
 	}
 }
 
@@ -51,11 +57,21 @@ int main(void)
 ISR(USART_RXC_vect){
 	/*Read the data from buffer*/
 	UART_RX_VALUE = UDR;
-	if(UART_RX_VALUE == 'A') {
-		LCD_Clear();
-		LCD_WriteString("HELLO!");
-		_delay_ms(1000);
-		LCD_Clear();
+	
+	switch(UART_RX_VALUE) {
+		case 'A':
+		//THIS IS USER1 LOGIN
+		enterPassword(USER1);
+		break;
+		case 'B':
+		//THIS IS USER2 LOGIN
+		enterPassword(USER2);
+		break;
+		case 'C':
+		//THIS IS USER3 LOGIN
+		enterPassword(USER3);
+		break;
+		default: break;
 	}
 	/*Clear the interrupt flag*/
 	UCSRA|=(1<<RXC);

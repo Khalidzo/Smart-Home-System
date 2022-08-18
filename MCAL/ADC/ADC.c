@@ -28,23 +28,19 @@ void ADC_Init(void){
 	SET_BIT(ADCSRA,1);
 	SET_BIT(ADCSRA,2);
 	SET_BIT(ADCSRA,5);   //Enable auto trigger
-	#if    ADC_OPERATION_MODE   ==   ADC_INT
-	SET_BIT(ADCSRA,3);   //Enable local int
-	SET_BIT(SREG,7);     //Enable global int
-	SET_BIT(ADCSRA,6);   //Start conversion
-	#endif
+	
 	SET_BIT(ADCSRA,7);   //Enable ADC circuit
 }
-#if  ADC_OPERATION_MODE   ==   ADC_POL
+
 u16  ADC_Read(void)
 {
 	SET_BIT(ADCSRA,6);   // to start conversion
 	while ((READ_BIT(ADCSRA,4)) == 0);
 	return ADC_VALUE;
 }
-#elif  ADC_OPERATION_MODE   ==   ADC_INT
+
+
 ISR(ADC_vect)
 {
 	x = ADC_VALUE;
 }
-#endif

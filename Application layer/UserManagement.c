@@ -112,9 +112,13 @@ void enterPassword(u8 userNumber) {
 	while(strcmp(getPassword(userNumber), currentPassword) != 0) {
 		LCD_Clear();
 		LCD_WriteString("Wrong Password");
+		Blutooth_SendString("Wrong Password");
+		Bluetooth_SendByte('\n');
 		_delay_ms(1500);
 		LCD_Clear();
 		LCD_WriteString("Try again!");
+		Blutooth_SendString("Try again!");
+		Bluetooth_SendByte('\n');
 		_delay_ms(1000);
 		LCD_Clear();
 		currentPassword = receivePassword();
@@ -127,6 +131,11 @@ void enterPassword(u8 userNumber) {
 	if(nTrials < 2) {
 		LCD_Clear();
 		LCD_WriteString("Welcome home!");
+		Blutooth_SendString("Welcome!");
+		Bluetooth_SendByte('\n');
+		Blutooth_SendString("The door is open");
+		Bluetooth_SendByte('\n');
+		Buzzer_Beep();
 		ServoMotor_OpenDoor();
 		_delay_ms(1500);
 		LCD_Clear();

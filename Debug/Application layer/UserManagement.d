@@ -22,7 +22,9 @@ Application layer/UserManagement.d Application layer/UserManagement.o: \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
  ../HAL/ServoMotor/ServoMotor.h ../HAL/Buzzer/Buzzer.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ../HAL/LCD/LCD.h
+ ../HAL/LCD/LCD.h ../HAL/Bluetooth/Bluetooth.h ../MCAL/UART/UART.h \
+ ../MCAL/UART/UARTCfg.h \
+ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h
 
 ../Application\ layer/UserManagement.h:
 
@@ -75,3 +77,11 @@ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:
 d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
 ../HAL/LCD/LCD.h:
+
+../HAL/Bluetooth/Bluetooth.h:
+
+../MCAL/UART/UART.h:
+
+../MCAL/UART/UARTCfg.h:
+
+d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:

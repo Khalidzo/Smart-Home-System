@@ -108,6 +108,7 @@
       <Value>../HAL/ServoMotor</Value>
       <Value>../HAL/DCMotor</Value>
       <Value>../HAL/Buzzer</Value>
+      <Value>../HAL/Bluetooth</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>

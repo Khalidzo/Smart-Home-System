@@ -12,6 +12,7 @@
 #include "string.h"
 #include "ServoMotor.h"
 #include "Buzzer.h"
+#include "Bluetooth.h"
 /*******************************************_MACROS_***************************************/
 #define USER1 1
 #define USER2 2
