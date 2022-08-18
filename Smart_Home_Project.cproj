@@ -107,6 +107,7 @@
       <Value>../HAL/TempSensor</Value>
       <Value>../HAL/ServoMotor</Value>
       <Value>../HAL/DCMotor</Value>
+      <Value>../HAL/Buzzer</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>

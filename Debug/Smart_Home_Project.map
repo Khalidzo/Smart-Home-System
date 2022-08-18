@@ -51,11 +51,9 @@ Discarded input sections
  .text.getPassword
                 0x00000000       0x80 Application layer/UserManagement.o
  .rodata.str1.1
-                0x00000000       0x60 Application layer/UserManagement.o
- .text.setAlarm
-                0x00000000       0xe4 Application layer/UserManagement.o
+                0x00000000       0x41 Application layer/UserManagement.o
  .text.receivePassword
-                0x00000000       0x7e Application layer/UserManagement.o
+                0x00000000       0x78 Application layer/UserManagement.o
  .text.enterPassword
                 0x00000000       0xc2 Application layer/UserManagement.o
  .bss.users     0x00000000        0xc Application layer/UserManagement.o
@@ -63,16 +61,16 @@ Discarded input sections
                 0x00000000        0x4 Application layer/UserManagement.o
  .data.userNameAddressSpace
                 0x00000000        0x4 Application layer/UserManagement.o
- .debug_info    0x00000000      0xf6c Application layer/UserManagement.o
- .debug_abbrev  0x00000000      0x209 Application layer/UserManagement.o
- .debug_loc     0x00000000      0xd78 Application layer/UserManagement.o
+ .debug_info    0x00000000      0xc68 Application layer/UserManagement.o
+ .debug_abbrev  0x00000000      0x1ef Application layer/UserManagement.o
+ .debug_loc     0x00000000      0xaf0 Application layer/UserManagement.o
  .debug_aranges
-                0x00000000       0x58 Application layer/UserManagement.o
- .debug_ranges  0x00000000       0x48 Application layer/UserManagement.o
- .debug_line    0x00000000      0x52c Application layer/UserManagement.o
- .debug_str     0x00000000      0x3af Application layer/UserManagement.o
+                0x00000000       0x50 Application layer/UserManagement.o
+ .debug_ranges  0x00000000       0x40 Application layer/UserManagement.o
+ .debug_line    0x00000000      0x4af Application layer/UserManagement.o
+ .debug_str     0x00000000      0x3ae Application layer/UserManagement.o
  .comment       0x00000000       0x31 Application layer/UserManagement.o
- .debug_frame   0x00000000      0x144 Application layer/UserManagement.o
+ .debug_frame   0x00000000      0x134 Application layer/UserManagement.o
  COMMON         0x00000000       0x24 Application layer/UserManagement.o
  .text          0x00000000        0x0 HAL/Bluetooth/Bluetooth.o
  .data          0x00000000        0x0 HAL/Bluetooth/Bluetooth.o
@@ -98,9 +96,24 @@ Discarded input sections
  .text          0x00000000        0x0 HAL/Buzzer/Buzzer.o
  .data          0x00000000        0x0 HAL/Buzzer/Buzzer.o
  .bss           0x00000000        0x0 HAL/Buzzer/Buzzer.o
- .debug_line    0x00000000        0x0 HAL/Buzzer/Buzzer.o
- .debug_str     0x00000000       0xfe HAL/Buzzer/Buzzer.o
+ .text.Buzzer_Init
+                0x00000000        0x8 HAL/Buzzer/Buzzer.o
+ .text.Buzzer_Beep
+                0x00000000       0x20 HAL/Buzzer/Buzzer.o
+ .rodata.str1.1
+                0x00000000       0x1f HAL/Buzzer/Buzzer.o
+ .text.Buzzer_SetAlarm
+                0x00000000       0xe4 HAL/Buzzer/Buzzer.o
+ .debug_info    0x00000000      0x3bc HAL/Buzzer/Buzzer.o
+ .debug_abbrev  0x00000000      0x118 HAL/Buzzer/Buzzer.o
+ .debug_loc     0x00000000      0x2d0 HAL/Buzzer/Buzzer.o
+ .debug_aranges
+                0x00000000       0x30 HAL/Buzzer/Buzzer.o
+ .debug_ranges  0x00000000       0x20 HAL/Buzzer/Buzzer.o
+ .debug_line    0x00000000      0x1e5 HAL/Buzzer/Buzzer.o
+ .debug_str     0x00000000      0x21d HAL/Buzzer/Buzzer.o
  .comment       0x00000000       0x31 HAL/Buzzer/Buzzer.o
+ .debug_frame   0x00000000       0x44 HAL/Buzzer/Buzzer.o
  .text          0x00000000        0x0 HAL/DCMotor/DCMotor.o
  .data          0x00000000        0x0 HAL/DCMotor/DCMotor.o
  .bss           0x00000000        0x0 HAL/DCMotor/DCMotor.o

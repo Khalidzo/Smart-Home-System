@@ -20,7 +20,9 @@ Application layer/UserManagement.d Application layer/UserManagement.o: \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
- ../HAL/ServoMotor/ServoMotor.h
+ ../HAL/ServoMotor/ServoMotor.h ../HAL/Buzzer/Buzzer.h \
+ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
+ ../HAL/LCD/LCD.h
 
 ../Application\ layer/UserManagement.h:
 
@@ -67,3 +69,9 @@ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.
 d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:
 
 ../HAL/ServoMotor/ServoMotor.h:
+
+../HAL/Buzzer/Buzzer.h:
+
+d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
+
+../HAL/LCD/LCD.h:

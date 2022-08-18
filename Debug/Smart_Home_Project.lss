@@ -100,7 +100,7 @@ Disassembly of section .text:
 
 int main(void)
 {
-	
+	//Buzzer_Init();
 	LCD_Init();
   92:	0e 94 ff 00 	call	0x1fe	; 0x1fe <LCD_Init>
 	TWI_Init();

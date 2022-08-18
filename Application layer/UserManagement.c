@@ -120,11 +120,11 @@ void enterPassword(u8 userNumber) {
 		currentPassword = receivePassword();
 		nTrials++;
 		if(nTrials >= 0) {
-			setAlarm();
+			Buzzer_SetAlarm();
 			break;
 		}
 	}
-	if(nTrials < 3) {
+	if(nTrials < 2) {
 		LCD_Clear();
 		LCD_WriteString("Welcome home!");
 		ServoMotor_OpenDoor();
@@ -133,28 +133,7 @@ void enterPassword(u8 userNumber) {
 	}
 }
 
-void setAlarm(void) {
-	LCD_Clear();
-	_delay_ms(2000);
-	LCD_WriteString("Login Failure");
-	_delay_ms(2000);
-	LCD_Clear();
-	LCD_WriteString("System Alarm ON!");
-	_delay_ms(1500);
-	LCD_Clear();
-	PORTA |= 1<<3;
-	_delay_ms(1000);
-	PORTA &= ~(1<<3);
-	_delay_ms(500);
-	PORTA |= 1<<3;
-	_delay_ms(1000);
-	PORTA &= ~(1<<3);
-	_delay_ms(500);
-	PORTA |= 1<<3;
-	_delay_ms(1000);
-	PORTA &= ~(1<<3);
-	_delay_ms(500);
-}
+
 
 u8* receivePassword(void) {
 	u8 counter = 0;

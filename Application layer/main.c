@@ -14,18 +14,25 @@
 #include "DCMotor.h"
 #include "UART.h"
 #include <stdlib.h>
+#include "Buzzer.h"
 
-u16 UART_RX_VALUE; //UART Receive value
+u16 UART_RX_VALUE; //Store UART Receive value with each reception
 
 /************************************************************************
- USER1 NAME: Khaled   USERPASSWORD: 1111
- USER2 NAME: Ahmed    USERPASSWORD: 4206
- USER3 NAME: Kitty    USERPASSWORD: 8012                                                                   
+ manageUser("Khaled", "1111", USER1);
+ manageUser("Ahmed", "4206", USER2);
+ manageUser("Kitty", "8012", USER3);
+************************************************************************/
+
+/************************************************************************
+ USER1 NAME: Khaled   USERPASSWORD: 1111 (SEND 'A' TO ACCESS THIS USER)
+ USER2 NAME: Ahmed    USERPASSWORD: 4206 (SEND 'B' TO ACCESS THIS USER)
+ USER3 NAME: Kitty    USERPASSWORD: 8012 (SEND 'C' TO ACCESS THIS USER)                                                                 
 ************************************************************************/
 
 int main(void)
 {
-	
+	//Buzzer_Init();
 	LCD_Init();
 	TWI_Init();
 	

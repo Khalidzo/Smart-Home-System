@@ -22,9 +22,9 @@ Application layer/main.d Application layer/main.o: \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
- ../HAL/ServoMotor/ServoMotor.h ../HAL/DCMotor/DCMotor.h \
- ../Application\ layer/Bitmath.h ../MCAL/UART/UART.h \
- ../MCAL/UART/UARTCfg.h
+ ../HAL/ServoMotor/ServoMotor.h ../HAL/Buzzer/Buzzer.h \
+ ../HAL/DCMotor/DCMotor.h ../Application\ layer/Bitmath.h \
+ ../MCAL/UART/UART.h ../MCAL/UART/UARTCfg.h
 
 d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -79,6 +79,8 @@ d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\inc
 d:\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:
 
 ../HAL/ServoMotor/ServoMotor.h:
+
+../HAL/Buzzer/Buzzer.h:
 
 ../HAL/DCMotor/DCMotor.h:
 

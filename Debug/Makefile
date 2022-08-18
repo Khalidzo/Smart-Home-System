@@ -143,84 +143,84 @@ LINKER_SCRIPT_DEP+=
 Application\ layer/main.o: ../Application\ layer/main.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Application\ layer/UserManagement.o: ../Application\ layer/UserManagement.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 HAL/Bluetooth/Bluetooth.o: ../HAL/Bluetooth/Bluetooth.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 HAL/Buzzer/Buzzer.o: ../HAL/Buzzer/Buzzer.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 HAL/DCMotor/DCMotor.o: ../HAL/DCMotor/DCMotor.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 HAL/EEPROM/EEPROM.o: ../HAL/EEPROM/EEPROM.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 HAL/LCD/LCD.o: ../HAL/LCD/LCD.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 HAL/ServoMotor/ServoMotor.o: ../HAL/ServoMotor/ServoMotor.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 HAL/TempSensor/TempSensor.o: ../HAL/TempSensor/TempSensor.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 MCAL/ADC/ADC.o: ../MCAL/ADC/ADC.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 MCAL/TWI/TWI.o: ../MCAL/TWI/TWI.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 MCAL/UART/UART.o: ../MCAL/UART/UART.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Microchip studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../Application layer" -I"../HAL/LCD" -I"../MCAL/TWI" -I"../HAL/EEPROM" -I"../MCAL/UART" -I"../MCAL/ADC" -I"../HAL/TempSensor" -I"../HAL/ServoMotor" -I"../HAL/DCMotor" -I"../HAL/Buzzer"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
