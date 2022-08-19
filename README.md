@@ -59,6 +59,8 @@ These are the requirements to implement smart home application:
 - Connected to the H-Bridge and operating on full speed
 ### Servo Motor
 - Used PWM (Fast PWM mode) for operation
+## Smart Home System State Diagram
+![State diagram](https://user-images.githubusercontent.com/78038233/185661064-c1db51c2-1317-4fab-8180-c726b0b83f66.PNG)
 
 ## 🔗 Smart home demo
 [Smart home project demo](https://drive.google.com/file/d/16_I1k_2VBO2R4m-A5Yu4stME-1ol_NHQ/view?usp=sharing)
