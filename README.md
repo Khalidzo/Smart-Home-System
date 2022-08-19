@@ -1,7 +1,7 @@
 
 # 🏠 Smart Home Project
 
-This is my final project for my embedded systems diploma.
+This is my final project for my embedded systems diploma at AMIT Learning.
 The diploma covered the core concepts of embedded systems and I've tried to apply these concepts in a practical project! :)
 ## System Requirements
 These are the requirements to implement smart home application:
