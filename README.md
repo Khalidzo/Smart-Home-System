@@ -55,6 +55,9 @@ These are the requirements to implement smart home application:
 - Operation mode: Polling
 ### Bluetooth
 - Implemented the UART communcation protocol for receiving and transmitting data
+### EEPROM
+- Used I2C protocol for communication
+- Can read/write every memory address by changing the data frame
 ### DC Motor
 - Connected to the H-Bridge and operating on full speed
 ### Servo Motor
