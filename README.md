@@ -5,7 +5,7 @@ This is my final project for my embedded systems diploma.
 The diploma covered the core concepts of embedded systems and I've tried to apply these concepts in a practical project! :)
 ## System Requirements
 These are the requirements to implement smart home application:
-- Remoted controlled by mobile or laptop
+- Remote-controlled by mobile or laptop
 - Login system including usernames and passwords
 - Usernames and passwords must be kept in memory even if the system power is off
 - If passwords are entered wrong more than 3 times, the system should fire up an alarm
