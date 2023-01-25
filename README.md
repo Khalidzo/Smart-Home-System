@@ -1,8 +1,8 @@
 
 # 🏠 Smart Home Project
 
-This is my final project for my embedded systems diploma.
-The diploma covered the core concepts of embedded systems and I've tried to apply these concepts in a practical project! :)
+This is my final project for my embedded systems course.
+The course covered the core concepts of embedded systems and I've tried to apply these concepts in a practical project! :)
 ## System Requirements
 These are the requirements to implement smart home application:
 - Remote-controlled by mobile or laptop
